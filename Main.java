@@ -4,7 +4,7 @@ import java.util.Random;
 public class Main {
 
 
-
+//  creates a random array of new integers
     public static void main(String[] args){
         int[] arr = new int[0];
         for(int i = 0; i < arr.length; i++){
@@ -12,7 +12,7 @@ public class Main {
             arr[i] = r.nextInt(0, 1000);
         }
 
-
+// checks to see if the list is empty then runs the program
         if (arr.length ==0){System.out.println("Empty List");}
         else {
             System.out.println(Arrays.toString(arr));
@@ -21,7 +21,11 @@ public class Main {
         }
 
     }
+
+    // sorts the list around a pivot point
     public static int partition(int[] arr, int low, int high){
+
+        
         int flip = low - 1;
 
         int pivot = arr[high];
@@ -40,7 +44,7 @@ public class Main {
 
 
     }
-
+// swaps two items in an array
     public static void swap(int[] arr, int i, int j){
 
         int temp = arr[j];
@@ -52,7 +56,7 @@ public class Main {
 
 
     }
-
+// puts everything together
     public static void quickSort(int[] arr, int low, int high){
         if(low < high) {
 
